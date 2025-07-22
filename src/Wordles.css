@@ -1,0 +1,260 @@
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin: 4px;
+  border: 1px solid #bbb;
+  font-size: 2.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 60px;
+  transition: transform 0.6s ease, background-color 0.3s ease;
+}
+
+.tile.correct {
+  --background: #5ac85a;
+  --border-color: #5ac85a;
+  background-color: var(--background);
+  color: white;
+  border-color: var(--border-color);
+  animation: none;
+}
+
+.tile.present {
+  --background: #e2cc68;
+  --border-color: #e2cc68;
+  background-color: var(--background);
+  color: white;
+  border-color: var(--border-color);
+  animation: none;
+}
+
+.tile.absent {
+  --background: #a1a1a1;
+  --border-color: #a1a1a1;
+  background-color: var(--background);
+  color: white;
+  border-color: var(--border-color);
+  animation: none;
+}
+
+.tile.empty {
+  background-color: #121213;
+  color: white;
+  border-color: #3a3a3c;
+  display: flex;
+}
+
+/* Flip triggered manually via .flipping */
+.tile.flipping {
+  animation: flip 0.5s ease forwards;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0);
+    background: #fff;
+    border-color: #333;
+  }
+  45% {
+    transform: rotateX(90deg);
+    background: white;
+    border-color: #333;
+  }
+  55% {
+    transform: rotateX(90deg);
+    background: var(--background);
+    border-color: var(--border-color);
+  }
+  100% {
+    transform: rotateX(0deg);
+    background: var(--background);
+    border-color: var(--border-color);
+    color: #eee;
+  }
+}
+
+/* === KEYBOARD STYLES === */
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.key {
+  margin: 2px;
+  padding: 10px;
+  width: 40px;
+  height: 50px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  background-color: #3a3a3c;
+  border: none;
+  border-radius: 6px;
+  line-height: 50px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+}
+
+.key.correct {
+  background-color: #5ac85a;
+  color: #fff;
+}
+
+.key.present {
+  background-color: #e2cc68;
+  color: #fff;
+}
+
+.key.absent {
+  background-color: #a1a1a1;
+  color: #fff;
+}
+
+.key.special {
+  background-color: #565758;
+  display: flex;
+}
+
+.key:hover {
+  background-color: #818384;
+}
+
+.key:active {
+  background-color: #a1a1a1;
+  letter-spacing: 3px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+/* === CONTAINER STYLES === */
+.wordle-container {
+  background-color: #323130;
+  color: #3a32328e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Verdana, Arial, sans-serif;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  animation: bounce 0.2s ease-in-out forwards;
+}
+
+/* === HEADERS === */
+h1 {
+  font-size: 3em;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  margin: 0 0 30px 0;
+  color: white;
+  display: flex;
+}
+
+h2 {
+  font-size: 1em;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  margin: 0 0 30px 0;
+  color: white;
+  display: flex;
+}
+
+p {
+  font-size: 1em;
+  border-bottom: 1px solid #eee;
+  margin: 0;
+  color: white;
+  display: flex;
+}
+
+/* === BUTTONS === */
+.Hint,
+.Acronym {
+  padding: 5px 12px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+.Hint:hover,
+.Acronym:hover {
+  letter-spacing: 3px;
+  background-color: #5ac85a;
+  color: hsl(0, 0%, 100%);
+  box-shadow: #5ac85a 0px 7px 29px 0px;
+}
+
+.Hint:active,
+.Acronym:active {
+  background-color: #5ac85a;
+  letter-spacing: 3px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+/* === TITLE ANIMATION === */
+.Title {
+  color: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  position: relative;
+  margin: 0;
+  font-weight: bold;
+}
+
+.Title span {
+  display: inline-block;
+  animation: bounce 0.5s ease-out forwards;
+  animation-delay: calc(var(--index) * 0.2s);
+  color: white;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    color: white;
+  }
+  50% {
+    transform: translateY(-30px);
+    color: white;
+  }
+  100% {
+    transform: translateY(0);
+    color: #5ac85a;
+  }
+}
+
+/* === APP ICON === */
+.app-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 7em;
+  height: 8em;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  background: none;
+}
