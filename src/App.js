@@ -1,5 +1,4 @@
-// Full App with tile-by-tile flip animation
-// Full App with flip and delayed color reveal
+
 import React, { useState, useEffect } from "react";
 import "./Wordles.css";
 import thumbnail from "./thumbnail_7_SWS_patch.png";
