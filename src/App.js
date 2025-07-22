@@ -35,7 +35,7 @@ const App = () => {
   };
 
   const handleClick = () => {
-    window.location.href = "https://c3tq59.csb.app/";
+    window.location.href = "https://aa-finder.vercel.app/";
   };
 
   const handleSubmit = async () => {
