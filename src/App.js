@@ -4,7 +4,7 @@ import "./Wordles.css";
 import thumbnail from "./thumbnail_7_SWS_patch.png";
 
 const App = () => {
-  const targetWord = "print".toUpperCase();
+  const targetWord = "shell".toUpperCase();
   const maxAttempts = 6;
   const wordLength = targetWord.length;
 
