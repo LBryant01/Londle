@@ -4,7 +4,7 @@ import "./Wordles.css";
 import thumbnail from "./thumbnail_7_SWS_patch.png";
 
 const App = () => {
-  const targetWord = "graduation".toUpperCase();
+  const targetWord = "congratulations".toUpperCase();
   const maxAttempts = 8;
   const wordLength = targetWord.length;
 
@@ -142,7 +142,7 @@ const App = () => {
     };
   }, [currentGuess, guesses, gameStatus]);
 
-  const text = "LONDLE";
+  const text = graduation".toUpperCase();
 
   return (
     <div className="wordle-container">
