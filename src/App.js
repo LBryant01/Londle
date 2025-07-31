@@ -4,8 +4,8 @@ import "./Wordles.css";
 import thumbnail from "./thumbnail_7_SWS_patch.png";
 
 const App = () => {
-  const targetWord = "final".toUpperCase();
-  const maxAttempts = 6;
+  const targetWord = "graduation".toUpperCase();
+  const maxAttempts = 8;
   const wordLength = targetWord.length;
 
   const [guesses, setGuesses] = useState([]);
