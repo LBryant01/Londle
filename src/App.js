@@ -142,7 +142,7 @@ const App = () => {
     };
   }, [currentGuess, guesses, gameStatus]);
 
-  const text = "graduation".toUpperCase();
+  const text = "Londle".toUpperCase();
 
   return (
     <div className="wordle-container">
