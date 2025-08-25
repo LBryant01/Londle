@@ -4,7 +4,7 @@ import "./Wordles.css";
 import thumbnail from "./thumbnail_7_SWS_patch.png";
 
 const App = () => {
-  const targetWord = "congratulations".toUpperCase();
+  const targetWord = "light".toUpperCase();
   const maxAttempts = 8;
   const wordLength = targetWord.length;
 
