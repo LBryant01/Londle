@@ -4,7 +4,7 @@ import thumbnail from "./thumbnail_7_SWS_patch.png";
 
 const App = () => {
   const targetWord = "Props".toUpperCase();
-  const maxAttempts = 8;
+  const maxAttempts = 6;
   const wordLength = targetWord.length;
 
   const [guesses, setGuesses] = useState([]);
