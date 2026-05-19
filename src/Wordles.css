@@ -258,146 +258,170 @@ p {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   background: none;
 }
-/* Instructor setup badge */
+
+/* === INSTRUCTOR SETUP BADGE === */
 .setup-badge {
   display: inline-block;
   font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 4px 12px;
+  padding: 4px 14px;
   border-radius: 99px;
-  background: rgba(21, 128, 61, 0.12);
-  color: #15803d;
+  background: rgba(90, 200, 90, 0.15);
+  color: #5ac85a;
+  border: 1px solid rgba(90, 200, 90, 0.3);
   margin-bottom: 1.25rem;
 }
- 
-/* Setup card */
+
+/* === SETUP CARD === */
 .setup-card {
-  background: #fff;
-  border: 1px solid #e5e7eb;
+  background: #1e1e1f;
+  border: 1px solid #3a3a3c;
   border-radius: 12px;
   padding: 1.5rem;
-  max-width: 340px;
-  margin: 0 auto;
+  width: 320px;
   text-align: left;
 }
- 
+
 .setup-label {
   display: block;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #6b7280;
+  letter-spacing: 0.08em;
+  color: #a1a1a1;
   margin-bottom: 6px;
   margin-top: 16px;
 }
- 
+
 .setup-label:first-of-type {
   margin-top: 0;
 }
- 
+
 .setup-input {
   width: 100%;
   box-sizing: border-box;
   padding: 10px 12px;
-  border: 1px solid #d1d5db;
+  border: 1px solid #3a3a3c;
   border-radius: 8px;
   font-size: 15px;
   outline: none;
-  transition: border-color 0.15s;
-  background: #f9fafb;
+  transition: border-color 0.15s, background 0.15s;
+  background: #121213;
+  color: white;
+  font-family: Verdana, Arial, sans-serif;
 }
- 
+
 .setup-input:focus {
-  border-color: #15803d;
-  background: #fff;
+  border-color: #5ac85a;
+  background: #1a1a1b;
 }
- 
+
 .setup-input--word {
   text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 600;
+  letter-spacing: 4px;
+  font-weight: 700;
+  font-size: 16px;
 }
- 
+
+.setup-input::placeholder {
+  color: #565758;
+  letter-spacing: normal;
+  font-weight: normal;
+}
+
 .setup-error {
   font-size: 13px;
-  color: #dc2626;
+  color: #e05c5c;
   margin: 10px 0 0;
   min-height: 18px;
 }
- 
+
 .setup-btn {
   margin-top: 1.25rem;
   width: 100%;
   padding: 11px;
   border-radius: 8px;
-  background: #15803d;
+  background: #5ac85a;
   border: none;
-  color: #fff;
+  color: #121213;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
+  font-family: Verdana, Arial, sans-serif;
+  letter-spacing: 1px;
   cursor: pointer;
-  transition: background 0.15s, transform 0.1s;
+  transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
 }
- 
+
 .setup-btn:hover:not(:disabled) {
-  background: #166534;
+  background: #6ed46e;
+  box-shadow: #5ac85a 0px 4px 20px 0px;
 }
- 
+
 .setup-btn:active:not(:disabled) {
-  transform: scale(0.98);
+  transform: translateY(2px);
+  transition: 100ms;
 }
- 
+
 .setup-btn:disabled {
-  opacity: 0.6;
+  opacity: 0.5;
   cursor: not-allowed;
 }
- 
-/* Hint display (shown to students during the game) */
+
+/* === HINT BOX (shown to students during game) === */
 .hint-box {
-  background: #f0fdf4;
-  border: 1px solid #bbf7d0;
+  background: #1e1e1f;
+  border: 1px solid #3a3a3c;
+  border-left: 3px solid #5ac85a;
   border-radius: 8px;
   padding: 8px 16px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   font-size: 14px;
-  color: #374151;
+  color: #d1d5db;
 }
- 
+
 .hint-label {
   font-weight: 700;
-  color: #15803d;
+  color: #5ac85a;
 }
- 
+
 .hint-length {
-  color: #9ca3af;
+  color: #565758;
   font-size: 13px;
 }
- 
-/* Inline game error */
+
+/* === INLINE GAME ERROR === */
 .game-error {
   font-size: 13px;
-  color: #dc2626;
+  color: #e05c5c;
   margin: 0 0 8px;
   min-height: 18px;
 }
- 
-/* Reset / new word button */
+
+/* === RESET / NEW WORD BUTTON === */
 .reset-btn {
   margin-top: 1.5rem;
-  padding: 8px 18px;
-  border-radius: 8px;
+  padding: 8px 20px;
+  border-radius: 50px;
   background: transparent;
-  border: 1px solid #d1d5db;
-  color: #6b7280;
+  border: 1px solid #3a3a3c;
+  color: #a1a1a1;
   font-size: 13px;
+  font-family: Verdana, Arial, sans-serif;
+  letter-spacing: 1px;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
- 
+
 .reset-btn:hover {
-  background: #f3f4f6;
-  color: #374151;
+  background: #3a3a3c;
+  color: white;
+  border-color: #565758;
 }
+
+.reset-btn:active {
+  transform: translateY(2px);
+  transition: 100ms;
+}
+
