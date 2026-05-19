@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import "./Wordles.css";
-import thumbnail from "./thumbnail_7_SWS_patch.png";
+import thumbnail from "./319th_Combat_Training_Squadron_emblem.png";
 
 const TITLE = "LONDLE";
 
